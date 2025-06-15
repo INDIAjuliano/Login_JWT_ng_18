@@ -1,0 +1,45 @@
+<div class="d-flex justify-content-center align-items-center" style="min-height: 100vh; background: #f5f5f5;">
+    <div class="card shadow-sm border-0" style="width: 360px; border-radius: 12px;">
+        <div class="text-center mt-4">
+            <img src="https://www.gstatic.com/images/branding/product/1x/avatar_square_blue_512dp.png" alt="Google Logo"
+                style="width: 56px; height: 56px;">
+        </div>
+        <div class="card-body">
+            <h5 class="card-title text-center mb-3" style="font-weight: 500;">Connexion</h5>
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                <div class="mb-3">
+                    <label for="email" class="form-label" style="font-size: 14px;">Adresse e-mail</label>
+                    <input type="email" class="form-control" id="email" placeholder="Entrez votre email"
+                        formControlName="email" required style="border-radius: 6px; font-size: 15px;">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label" style="font-size: 14px;">Mot de passe</label>
+                    <input type="password" class="form-control" id="password" placeholder="Entrez votre mot de passe"
+                        required formControlName="password" style="border-radius: 6px; font-size: 15px;">
+                </div>
+                <button type="submit" class="btn btn-primary w-100"
+                    style="background: #1a73e8; border: none; border-radius: 6px; font-weight: 500;"
+                    [disabled]="form.invalid">
+                    Se connecter
+                </button>
+            </form>
+            <div class="text-center mt-3">
+                <a href="#" style="font-size: 13px; color: #1a73e8; text-decoration: none;">Mot de passe oublié ?</a>
+            </div>
+            <div class="text-center mt-3">
+                <span style="font-size: 13px; color: #888;">Pas de compte ?</span>
+                <a style="font-size: 13px; color: #1a73e8; text-decoration: none; margin-left: 4px;"
+                    routerLink="register">
+                    Créer un compte
+                </a>
+            </div>
+            <div class="text-center mt-3">
+                <button type="button" class="btn btn-outline-primary w-100" style="border-radius: 6px;">
+                    <img src="https://www.gstatic.com/images/branding/product/1x/avatar_square_blue_512dp.png"
+                        alt="Google" style="width:20px; height:20px; margin-right:8px; vertical-align:middle;">
+                    S'inscrire avec Google
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
